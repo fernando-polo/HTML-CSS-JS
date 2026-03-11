@@ -1,0 +1,60 @@
+Estructura principal de la página
+
+    <header> — Encabezado del sitio: logo, nav
+    <nav> — Menú de navegación
+    <main> — Contenido principal (solo uno por página)
+    <section> — Sección temática con sentido propio
+    <article> — Contenido independiente: post, noticia, tarjeta
+    <aside> — Contenido secundario: sidebar, anuncios
+    <footer> — Pie de página
+
+Texto y contenido
+
+    <h1> al <h6> — Jerarquía de títulos
+    <p> — Párrafo
+    <span> — Texto en línea sin significado semántico
+    <strong> — Texto importante (negrita semántica)
+    <em> — Texto enfatizado (cursiva semántica)
+    <blockquote> — Cita larga
+    <cite> — Fuente o autor de una cita
+    <time> — Fecha u hora
+    <address> — Información de contacto
+
+Listas
+
+    <ul> — Lista sin orden
+    <ol> — Lista ordenada
+    <li> — Elemento de lista
+    <dl> — Lista de definiciones
+    <dt> — Término a definir
+    <dd> — Definición del término
+
+Multimedia
+
+    <img> — Imagen
+    <figure> — Contenedor de imagen con contexto
+    <figcaption> — Descripción de la figura
+    <video> — Video
+    <audio> — Audio
+
+Formularios
+
+    <form> — Contenedor del formulario
+    <fieldset> — Agrupa campos relacionados
+    <legend> — Título del fieldset
+    <label> — Etiqueta de un campo
+    <input> — Campo de entrada
+    <textarea> — Campo de texto largo
+    <select> — Lista desplegable
+    <option> — Opción dentro del select
+    <button> — Botón
+
+Tabla
+
+    <table> — Tabla
+    <thead> — Encabezado de tabla
+    <tbody> — Cuerpo de tabla
+    <tfoot> — Pie de tabla
+    <tr> — Fila
+    <th> — Celda de encabezado
+    <td> — Celda de dato
