@@ -1,0 +1,61 @@
+🏥 Clínica Salud Total — Sitio web informativo
+Crea el sitio web de una clínica médica ficticia llamada "Clínica Salud Total" que contenga:
+
+Header y navegación
+    El nombre de la clínica como título principal
+    Un menú con enlaces <a href="#seccion"> a: Inicio, Servicios, Médicos, Contacto
+
+
+Sección: Servicios
+    Al menos 2 <article>, uno por especialidad (ej. Cardiología, Pediatría)
+    Cada artículo debe tener fecha de actualización con <time>
+    Una imagen representativa con <figure> y <figcaption>
+    Una cita de algún médico con <blockquote> y <cite>
+    Usa <strong> y <em> al menos una vez cada uno
+    Un enlace <a href="#"> al final de cada artículo que diga "Leer más"
+
+
+Sección: Nuestro equipo
+    Una tabla con columnas: Médico, Especialidad, Horario, Años de experiencia
+    Al menos 3 médicos en el <tbody>
+    El nombre de cada médico debe ser un <a href="#"> que simule ir a su perfil
+    Un <tfoot> indicando la fuente de los datos
+
+
+Sección: Glosario médico
+    Una lista de definiciones <dl> con al menos 4 términos médicos
+
+
+Sección: Recomendaciones
+    Una lista ordenada <ol> con pasos para prepararse antes de una consulta
+    Una lista desordenada <ul> con documentos que debes llevar
+    Un enlace externo <a href="https://..." target="_blank" rel="noopener"> a un sitio de salud oficial como la OMS
+
+
+Aside
+    Horarios de atención
+    Dirección con <address> que incluya un <a href="mailto:"> y un <a href="tel:"> para correo y teléfono
+    Un enlace <a href="#"> a Google Maps simulando la ubicación
+
+
+Formulario de cita médica
+    Primer <fieldset>: 
+        datos del paciente (nombre, email, teléfono con sus <label> e <input> correspondientes)
+    Segundo <fieldset>: 
+        detalles de la cita (especialidad con <select>, síntomas con <textarea>)
+    Un <button> para enviar
+
+
+Footer
+    Nombre de la clínica y año
+    Enlaces <a href="#seccion"> de regreso a cada sección principal
+    Un enlace externo a redes sociales con target="_blank" rel="noopener"
+
+
+Reglas del ejercicio
+
+No uses <div> como estructura principal, solo etiquetas semánticas
+Cada etiqueta de la lista debe aparecer al menos una vez
+<a> debe usarse en sus tres variantes: interno (#seccion), externo (https://), y de contacto (mailto: y tel:)
+El CSS es opcional, enfócate en el HTML semántico
+Los datos pueden ser ficticios

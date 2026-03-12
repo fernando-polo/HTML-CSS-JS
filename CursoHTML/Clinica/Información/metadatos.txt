@@ -1,0 +1,20 @@
+Esenciales
+    <meta charset="UTF-8"> — Codificación de caracteres
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> — Adaptación a móviles
+    <title>Mi Sitio Web</title> — Título de la página
+SEO
+    <meta name="description" content="Descripción de mi página web"> — Descripción de la página
+    <meta name="keywords" content="palabra1, palabra2"> — Palabras clave (casi obsoleto)
+    <meta name="robots" content="index, follow"> — Instrucciones para bots de búsqueda
+    <link rel="canonical" href="https://misitioweb.com/pagina"> — URL oficial de la página
+Open Graph
+    <meta property="og:title" content="Título de mi página"> — Título de la tarjeta en redes sociales
+    <meta property="og:description" content="Descripción corta y atractiva"> — Descripción de la tarjeta
+    <meta property="og:image" content="https://misitioweb.com/imagen.jpg"> — Imagen de la tarjeta
+    <meta property="og:url" content="https://misitioweb.com"> — URL de la página
+Favicon e íconos
+    <link rel="icon" href="/favicon.ico"> — Ícono del sitio en la pestaña del navegador
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> — Ícono al guardar en pantalla de inicio iOS
+CSS y fuentes
+    <link rel="stylesheet" href="styles.css"> — Archivo CSS externo
+    <link rel="preconnect" href="https://fonts.googleapis.com"> — Conexión anticipada a servidor externo
