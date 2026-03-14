@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Práctica CSS – Box Model</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════
+       SECCIÓN 1 — HERO
+  ════════════════════════════════════ -->
+  <section class="seccion-hero">
+    <div class="contenedor">
+      <h1 class="hero-titulo">Aprende CSS</h1>
+      <p class="hero-subtitulo">Box model, unidades y botones desde cero.</p>
+      <div class="grupo-botones">
+        <button class="btn">Empezar ahora</button>
+        <button class="btn btn-secundario">Ver más</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SECCIÓN 2 — TARJETAS
+  ════════════════════════════════════ -->
+  <section class="seccion-tarjetas">
+    <div class="contenedor">
+
+      <div class="tarjeta">
+        <span class="tag">Principiante</span>
+        <h2 class="tarjeta-titulo">Box Model</h2>
+        <p class="tarjeta-texto">
+          Todo elemento HTML es una caja. Aprende cómo funciona el
+          <code>margin</code>, <code>border</code>, <code>padding</code>
+          y el <code>content</code>.
+        </p>
+        <button class="btn">Leer más</button>
+      </div>
+
+      <div class="tarjeta">
+        <span class="tag">Intermedio</span>
+        <h2 class="tarjeta-titulo">Unidades CSS</h2>
+        <p class="tarjeta-texto">
+          Diferencias entre <code>px</code>, <code>em</code>, <code>rem</code>
+          y <code>%</code>. Cuándo usar cada una y por qué importa.
+        </p>
+        <button class="btn">Leer más</button>
+      </div>
+
+      <div class="tarjeta">
+        <span class="tag">Práctica</span>
+        <h2 class="tarjeta-titulo">Botones</h2>
+        <p class="tarjeta-texto">
+          Dale estilo a botones usando <code>padding</code>,
+          <code>border-radius</code> y <code>border</code> con distintas
+          unidades para que se vean profesionales.
+        </p>
+        <button class="btn">Leer más</button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════
+       SECCIÓN 3 — FORMULARIO
+  ════════════════════════════════════ -->
+  <section class="seccion-formulario">
+    <div class="contenedor">
+      <h2 class="form-titulo">Contáctanos</h2>
+
+      <div class="campo-grupo">
+        <label class="campo-label" for="nombre">Nombre</label>
+        <input class="input-campo" type="text" id="nombre" placeholder="Tu nombre" />
+      </div>
+
+      <div class="campo-grupo">
+        <label class="campo-label" for="email">Correo</label>
+        <input class="input-campo" type="email" id="email" placeholder="tu@correo.com" />
+      </div>
+
+      <div class="grupo-botones">
+        <button class="btn">Enviar</button>
+        <button class="btn btn-secundario">Cancelar</button>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>

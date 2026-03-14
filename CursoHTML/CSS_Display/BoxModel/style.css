@@ -1,0 +1,122 @@
+ /* =============================================
+       ZONA DE PRÁCTICA — Escribe tu CSS aquí abajo
+       ============================================= */
+
+    /* --- RESET BÁSICO (ya dado, no modificar) --- */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Syne', sans-serif;
+      background-color: #f5f0e8;
+      color: #1a1a1a;
+    }
+
+    /* ---- Agrega tu CSS a partir de aquí ---- */
+
+    /* EJERCICIO 1 ─ .tarjeta */
+    /* Ejercicio 1 — .tarjeta
+        Dale a cada tarjeta un fondo blanco, padding de 1.5rem, 
+        un border sólido de 2px y un border-radius de 8px. 
+        Deja un margin abajo de 1.5rem entre tarjetas. */
+    
+    .tarjeta{
+        background-color: white;
+        padding: 1.5rem;
+        border: solid 2px;
+        border-radius: 8px;
+        margin: 1.5rem;
+    }
+    
+        
+    /* EJERCICIO 2 ─ .tarjeta-titulo */
+    /* Ejercicio 2 — .tarjeta-titulo
+        Ponle un margin-bottom en em (intenta 0.5em). ¿Qué pasa si cambias el font-size de la tarjeta? 
+        Observa cómo el margen cambia también. */
+    .tarjeta-titulo{
+        margin-bottom: 0.5em;
+    }
+
+
+    /* EJERCICIO 3 ─ .tarjeta-texto */
+    /* Ejercicio 3 — .tarjeta-texto
+        Aplica padding solo en los lados izquierdo y derecho 
+        usando la forma abreviada de 2 o 4 valores. Usa px. */
+    .tarjeta-texto{
+        padding: 0 6px;
+    
+    }
+
+
+    /* EJERCICIO 4 ─ .btn */
+    /* Ejercicio 4 — .btn (botón principal)
+        Crea un botón con padding de arriba/abajo en em y de los lados en em también (ej. 0.6em 1.4em). 
+        Ponle border: none, un color de fondo y border-radius en px. 
+        Cambia el font-size del botón y observa cómo el padding se adapta automáticamente. */
+    .btn{
+        padding: 0.6em 1.4em;
+        border: none;
+        background-color: burlywood;
+        border-radius: 4px;
+    }
+
+
+    /* EJERCICIO 5 ─ .btn-secundario */
+    /* Ejercicio 5 — .btn-secundario
+        A diferencia del primario, este no tiene fondo: usa background: 
+        transparent y agrega un border de 2px solid con el mismo color que el botón primario. */
+    .btn-secundario{
+        background: transparent;
+        border: 2px solid burlywood;
+    }
+
+
+    /* EJERCICIO 6 ─ .seccion-hero */
+    /* Ejercicio 6 — .seccion-hero
+        Dale un padding generoso arriba y abajo usando rem (ej. 5rem). 
+        Observa cómo separa el contenido de los bordes del viewport. */
+    .seccion-hero{
+        padding: 5rem 0 5rem 0;
+    }
+
+
+
+    /* EJERCICIO 7 ─ .contenedor */
+    /* Ejercicio 7 — .contenedor
+        Haz que el contenedor nunca supere 900px de ancho (max-width), 
+        que se centre con margin: 0 auto y que tenga padding a los lados en % (ej. 5%). 
+        Cambia el tamaño de la ventana y ve cómo reacciona. */
+    .contendor{
+        max-width: 900px;
+        margin: auto;
+        padding: 0 5% 0 5%;
+    }
+
+
+
+    /* EJERCICIO 8 ─ .tag */
+    /* Ejercicio 8 — .tag
+        Ese pequeño badge de "Principiante / Intermedio / Práctica" debe tener padding en px, 
+        border-radius alto (tipo píldora, ej. 999px) y font-size en rem pequeño. */
+    .tag{
+        padding: 4px;
+        border-radius: 999px;
+        font-size: 0.5rem;
+    }
+    
+
+    /* EJERCICIO 9 ─ .input-campo */
+    /* Ejercicio 9 — .input-campo
+        Dale al input un width del 100%, padding en rem, un border sólido de 1px 
+        y border-radius en px. Nota cómo sin box-sizing: border-box 
+        el padding rompería el 100% de ancho (pero ya está en el reset 😉). */
+    .input-campo{
+        width: 100%;
+        padding: 0.5rem;
+        border: solid 1px;
+        border-radius: 8px;
+
+
+    }
+    
