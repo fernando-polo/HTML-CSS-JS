@@ -1,0 +1,161 @@
+/* Ejercicios CSS */
+
+/* Ejercicio 1 — Selector de elemento
+    Haz que todo el texto del sitio use la fuente Arial y 
+    que el body tenga un color de fondo #f0f4f8. */
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f0f4f8;
+}
+
+
+/* 
+Ejercicio 2 — Selector de ID
+    Usando el id #encabezado, dale al header un fondo de color #1a73e8 y 
+    que el texto sea blanco.
+*/
+#encabezado{
+    background-color:#1a73e8;
+    color: white;
+}
+
+
+/* 
+Ejercicio 3 — Selector de clase
+    Usando la clase .tarjeta-servicio, dale a cada artículo un borde de 1px solid #ccc, 
+    un padding de 16px y un border-radius de 8px. */
+.tarjeta-servicio{
+    border: 1px solid #ccc;
+    padding: 16px;
+    border-radius: 8px;
+}
+
+
+/* Ejercicio 4 — Selector de clase (sobre texto)
+    Usando la clase .titulo-servicio, 
+    haz que los títulos "Cardiología" y "Pediatría" tengan color #1a73e8 y un 
+    tamaño de fuente de 20px. */
+.titulo-servicio{
+    color: #1a73e8;
+    font-size: 20px;
+}
+
+
+/* Ejercicio 5 — Selector de agrupación
+    Con un solo bloque CSS, haz que todos los <h3> y <h4> del sitio 
+    (los de secciones, glosario, recomendaciones, etc.) 
+    tengan un margin-bottom de 10px y color de texto #333. */
+h3, h4{
+    margin-bottom: 10px;
+    color: #333;
+}
+
+
+/* Ejercicio 6 — Compound Selector
+   Hay un input que tiene id="nombre". Dale un borde de 2px solid #1a73e8
+   y un border-radius de 4px, pero SOLO si también tiene el atributo type="text".
+   Pista: input#nombre (en el HTML el input con id nombre es de tipo texto) */
+#nombre[type=text]{
+    border: 2px solid #1a73e8;
+    border-radius: 4px;
+}
+
+
+/* Ejercicio 7 — Group Selector
+   Con un solo bloque CSS, haz que los elementos <th>, <td> y <caption>
+   de la tabla tengan padding de 8px y text-align: left. */
+th, td, caption{
+    padding: 8px;
+    text-align: left;
+}
+
+
+/* Ejercicio 8 — Group Selector
+   Con un solo bloque CSS, haz que todos los <h3> dentro de las secciones
+   #nuestroEquipo, #glosarioMedico y #recomendaciones tengan un
+   border-bottom de 2px solid #1a73e8 y padding-bottom de 6px. */
+#nuestroEquipo h3, #glosarioMedico h3, #recomendaciones h3{
+    border-bottom: 2px solid #1a73e8;
+    padding-bottom: 6px; 
+}
+
+
+/* Ejercicio 9 — Descendant Combinator
+   Dentro del <header id="encabezado">, haz que todos los <a>
+   (los links del nav) tengan color blanco y text-decoration: none.
+   No importa qué tan profundo estén dentro del header. */
+#encabezado a{
+    color: white;
+    text-decoration: none;
+}
+
+
+
+/* Ejercicio 10 — Descendant Combinator
+   Dentro del <footer id="pie-pagina">, haz que todos los <a>
+   tengan color #f0f4f8 y que al pasar el cursor (hover) cambien a #ffdd57. */
+footer a{
+    color: #f0f4f8;
+}
+footer a:hover{
+    color: #ffdd57;
+}
+
+
+/* Ejercicio 11 — Child Combinator
+   El <main> tiene varios hijos directos: las secciones, el aside, el form, los br.
+   Usando child combinator, haz que SOLO los <section> que sean hijos directos
+   de <main> tengan un margin-bottom de 24px. */
+main > section{
+    margin-bottom: 24px;
+}
+
+
+/* Ejercicio 12 — Child Combinator
+   Dentro de #servicios, haz que SOLO los <article> hijos directos
+   tengan un box-shadow de 0 2px 8px rgba(0,0,0,0.1).
+   (No debería afectar elementos más profundos dentro del article.) */
+#servicios > article{
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Ejercicio 13 — Next Sibling Combinator ( + )
+   En el formulario hay varios <br> seguidos de inputs.
+   Haz que el <input> que venga INMEDIATAMENTE después de un <br>
+   tenga un margin-top de 4px y width de 100%. */
+form br + input{
+    margin-top: 4px;
+    width: 100%;
+}
+
+
+/* Ejercicio 14 — Next Sibling Combinator ( + )
+   En la tabla, haz que la fila <tbody> que venga
+   inmediatamente después del <thead> tenga un
+   border-top de 2px solid #1a73e8. */
+table thead + tbody{
+    border-top: 2px solid #1a73e8;
+}
+
+
+/* Ejercicio 15 — Subsequent Sibling Combinator ( ~ )
+   Dentro del nav del header, el primer <a> es "Servicios".
+   Haz que TODOS los <a> que vengan después de ese primero
+   tengan un margin-left de 16px.
+   Pista: el selector sería algo como nav a + a, o busca
+   cómo seleccionar todos los hermanos posteriores al primero. */
+nav a ~ a{
+    margin-left: 16px;
+}
+
+
+
+/* Ejercicio 16 — Subsequent Sibling Combinator ( ~ )
+   En la sección #recomendaciones hay un <h4> seguido de un <ol>,
+   y otro <h4> seguido de un <ul>.
+   Haz que todos los <ul> y <ol> que sean hermanos posteriores
+   de un <h4> tengan padding-left de 20px. */
+#recomendaciones h4 ~ ul, #recomendaciones h4 ~ ol{
+    padding-left: 20px;
+}

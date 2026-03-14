@@ -1,0 +1,79 @@
+=== COMPOUND SELECTOR ===
+#nombre.estudiante
+Un mismo elemento que tiene a la vez el id `nombre` y la clase `estudiante`. Ambas condiciones deben cumplirse en el mismo elemento.
+div#nombre          ← solo tiene el id
+div#nombre.estudiante  ✓ tiene los dos
+p.estudiante        ← solo tiene la clase
+
+
+=== GROUP SELECTOR (selector de lista) ===
+#nombre, .estudiante, p
+Lista separada por comas. Aplica a cualquier elemento que cumpla al menos una de las condiciones. Son selectores independientes.
+div#nombre      ✓ por el id
+span.estudiante ✓ por la clase
+p               ✓ por ser párrafo
+div.otro        ← no cumple ninguna
+
+
+=== DESCENDANT COMBINATOR ===
+#nombre .estudiante
+Descendiente. Selecciona cualquier elemento con clase `estudiante` que esté dentro de `#nombre`, sin importar qué tan profundo esté.
+div#nombre
+  p.estudiante        ✓ hijo directo
+  div
+    span.estudiante   ✓ nieto también
+    ul
+      li.estudiante   ✓ bisnieto también
+span.estudiante       ← fuera de #nombre
+
+
+=== CHILD COMBINATOR ===
+#nombre > .estudiante
+Hijo directo. Igual que el anterior pero solo el primer nivel. El elemento con clase `estudiante` debe estar inmediatamente dentro de `#nombre`.
+div#nombre
+  p.estudiante        ✓ hijo directo
+  div
+    span.estudiante   ← nieto, no aplica
+    ul
+      li.estudiante   ← bisnieto, no aplica
+
+[✓] Seleccionado
+[←] No seleccionado
+
+
+=== NEXT SIBLING COMBINATOR ( + ) ===
+#nombre + .estudiante
+Hermano siguiente inmediato. Selecciona el elemento con clase `estudiante` que esté
+colocado INMEDIATAMENTE después de `#nombre`, y que compartan el mismo padre.
+
+<div>
+  <div id="nombre"></div>
+  <p class="estudiante">  ✓ hermano inmediato siguiente
+  <p class="estudiante">  ← segundo hermano, no aplica
+  <p class="estudiante">  ← tercer hermano, no aplica
+</div>
+<p class="estudiante">    ← distinto padre, no aplica
+
+
+
+=== SUBSEQUENT SIBLING COMBINATOR ( ~ ) ===
+#nombre ~ .estudiante
+Hermanos subsecuentes. Selecciona TODOS los elementos con clase `estudiante` que
+estén después de `#nombre`, sin importar cuántos elementos haya entre ellos,
+siempre que compartan el mismo padre.
+
+<div>
+  <div id="nombre"></div>
+  <span></span>
+  <p class="estudiante">  ✓ primer hermano posterior
+  <span></span>
+  <p class="estudiante">  ✓ aunque haya elementos entre ellos
+  <p class="estudiante">  ✓ todos los que vengan después
+</div>
+<p class="estudiante">    ← distinto padre, no aplica
+
+IMPORTANTE: ambos combinators solo miran hacia ADELANTE.
+Un elemento que esté ANTES de #nombre nunca será seleccionado.
+
+[✓] Seleccionado
+[←] No seleccionado
