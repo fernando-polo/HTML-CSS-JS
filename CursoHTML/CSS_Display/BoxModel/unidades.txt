@@ -1,0 +1,91 @@
+====================================================
+NOTAS CSS — UNIDADES DE MEDIDA
+Tema relacionado: Box Model + Diseño Responsive
+====================================================
+
+Las unidades de medida se aplican sobre el Box Model de CSS,
+que es el sistema que define cómo ocupa espacio cada elemento:
+  - content (el contenido)
+  - padding (espacio interno)
+  - border (el borde)
+  - margin (espacio externo)
+
+También son clave en Diseño Responsive, donde el objetivo es
+que el layout se adapte a distintos tamaños de pantalla.
+
+----------------------------------------------------
+UNIDADES — REGLAS DE ORO
+----------------------------------------------------
+
+REM — el caballo de batalla
+  Úsala en: padding, margin, font-size, gap (casi todo el espaciado)
+  Equivale a: el font-size del elemento <html> (por defecto 16px)
+  Por qué: escala de forma consistente en todo el sitio y respeta
+  las preferencias de accesibilidad del usuario (si el usuario
+  agranda el texto en su navegador, todo el layout escala con él)
+  Ejemplo: padding: 1.5rem = 24px con el tamaño base por defecto
+
+PX — solo para cosas que NO deben escalar
+  Úsala en: border, box-shadow, outline
+  Por qué: son detalles tan pequeños que si escalan se ven raros
+  Evítala en: font-size, padding, margin (no respeta accesibilidad)
+  Ejemplo: border: 2px solid #ccc
+
+% — para anchos fluidos
+  Úsala en: width, max-width, dentro de layouts flex o grid
+  Equivale a: un porcentaje del contenedor padre
+  Por qué: permite que los elementos se adapten al espacio disponible
+  Ojo: en padding-top/bottom el % se calcula sobre el WIDTH del padre,
+  no sobre el alto — comportamiento contraintuitivo
+  Ejemplo: width: 50%, max-width: 100%
+
+VW / VH — para elementos que llenan la pantalla
+  vw = porcentaje del ancho del viewport (ventana del navegador)
+  vh = porcentaje del alto del viewport
+  Úsalos en: secciones hero, fondos de modal, layouts full-screen
+  Evítalos en: textos pequeños (vw hace que sean ilegibles en móvil)
+  IMPORTANTE: en móvil, 100vh incluye la barra del navegador y
+  puede causar que el contenido se corte. La solución moderna es
+  usar 100dvh (dynamic viewport height) en su lugar.
+  Ejemplo: height: 100dvh
+
+EM — con cuidado, solo en componentes aislados
+  Equivale a: el font-size del elemento PADRE (no del <html>)
+  Úsala en: padding de botones o badges donde quieres que el
+  espaciado escale si cambias el tamaño del propio componente
+  Problema principal — efecto cascada:
+    Si el padre tiene font-size: 1.2em y el hijo también tiene
+    font-size: 1.2em, el resultado es 1.2 × 1.2 = 1.44em.
+    Se acumula sin querer al anidar elementos.
+  Por eso, para layout general es mejor usar rem.
+
+----------------------------------------------------
+RESUMEN RÁPIDO
+----------------------------------------------------
+
+  rem  →  espaciado y texto en general
+  px   →  bordes, sombras, detalles finos
+  %    →  anchos fluidos relativos al padre
+  vw   →  anchos relativos a la pantalla
+  dvh  →  altos relativos a la pantalla (preferir sobre vh)
+  em   →  solo componentes aislados, con cuidado
+
+----------------------------------------------------
+SOBRE HEIGHT Y WIDTH
+----------------------------------------------------
+
+width:
+  - Los elementos de bloque ya ocupan 100% del padre por defecto.
+  - Úsala para RESTRINGIR el ancho: max-width: 680px
+  - En elementos fijos como avatares: width: 48px
+  - En inputs dentro de formularios: width: 100%
+
+height:
+  - Casi nunca se define explícitamente.
+  - Deja que la altura la determine el CONTENIDO.
+  - Usa padding arriba y abajo para dar espacio interno.
+  - Si fuerzas un height fijo y el contenido crece, se desborda.
+  Cuándo sí usarla:
+    - height: 100dvh para secciones full-screen
+    - height: 48px para avatares o elementos cuadrados fijos
+    - height: 4px para barras decorativas o separadores
