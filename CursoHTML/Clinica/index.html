@@ -18,11 +18,14 @@
     <link rel="icon" type="image/jpg" href="images/IMSS_Logo.jpg"> 
     <link rel="apple-touch-icon" sizes="180x180" href="images/IMSS_Logo.jpg"> 
 
+
+    <link rel="stylesheet" href="style.css">
+
 </head>
 
 <body>
 
-    <header>
+    <header id="encabezado">
         <h1>Salud Total</h1>
         <nav>
             <a href="#servicios">Servicios</a>
@@ -34,8 +37,8 @@
 
     <main>
         <section id="servicios">
-            <article>
-                <h3>Cardiología</h3>
+            <article class="tarjeta-servicio">
+                <h3 class="titulo-servicio">Cardiología</h3>
                 <p>Fecha de actualización: <time datetime="2026-03-11">Marzo 11</time></p>
                 <figure>
                     <img
@@ -60,8 +63,8 @@
                 </p>
             </article>
 
-            <article>
-                <h3>Pediatría</h3>
+            <article class="tarjeta-servicio">
+                <h3 class="titulo-servicio">Pediatría</h3>
                 <p>Fecha de actualización: <time datetime="2026-03-14">Marzo 14</time></p>
                 <figure>
                     <img
@@ -230,7 +233,7 @@
         </form>
     </main>
 
-    <footer>
+    <footer id="pie-pagina">
         <h3>Clínica Salud Total - 
             <time datetime="12:00">
                 <strong>12:00 p.m.</strong>
