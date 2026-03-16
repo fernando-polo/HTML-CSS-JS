@@ -1,0 +1,33 @@
+ANALOGÍA DE LOS MUEBLES
+Imagina que estás decorando un cuarto.
+
+Box Model → 
+    El tamaño y apariencia del mueble. Defines qué tan grande es la caja, cuánto relleno tiene por dentro (padding), 
+    su borde y el espacio que deja alrededor (margin). Es el mueble en sí.
+
+
+Display → 
+    Las reglas del cuarto. Define cómo se acomodan los muebles entre sí. 
+    ¿Cada mueble ocupa toda la pared (block)? ¿Se acomodan uno junto al otro (inline)? Es la lógica de acomodo.
+
+
+Position → 
+    Mover un mueble fuera de las reglas. 
+    Te permite sacar un mueble específico de ese flujo normal y colocarlo exactamente donde tú quieras, 
+    independientemente de los demás. Puedes pegarlo a una esquina del cuarto, dejarlo flotando sobre otros muebles, 
+    o fijarlo para que no se mueva aunque hagas scroll.
+
+    Sin position, todos los elementos siguen el flujo normal del documento 
+    — cada elemento aparece después del anterior, respetando las reglas del display. 
+    El position es precisamente la herramienta para romper ese flujo cuando lo necesitas.
+    Los valores principales que verás son:
+
+    static → es el default, sigue el flujo normal, como si no tuvieras position
+    relative → se mueve relativo a donde estaría normalmente
+    absolute → se sale del flujo y se posiciona relativo a su contenedor padre
+    fixed → se pega a la pantalla, no se mueve con el scroll
+
+    
+Box Model → define QUÉ TAN GRANDE es el elemento
+Display → define CÓMO SE COMPORTA con los demás
+Position → define DÓNDE SE COLOCA exactamente
