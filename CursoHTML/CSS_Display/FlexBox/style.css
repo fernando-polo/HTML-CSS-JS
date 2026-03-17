@@ -1,0 +1,92 @@
+/* /* Ejercicio 1 — Header con nav a la derecha
+En .site-header, usa flex para que el logo quede a la izquierda y los links del nav a la derecha.  */
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; 
+  height: 50px;
+}
+
+
+/* Ejercicio 2 — Dirección y espaciado
+En #fila-basica (.caja-flex), activa flex y experimenta cambiando flex-direction 
+entre row, row-reverse, column y column-reverse. 
+Luego agrega gap para separar los ítems. */
+#fila-basica.caja-flex{
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 10px;
+    align-items: center;
+}
+
+
+/* Ejercicio 3 — Alineación
+En #alineacion, activa flex y prueba todas las combinaciones de justify-content 
+(flex-start, center, space-between, space-around, space-evenly) y align-items 
+(flex-start, center, flex-end, stretch). 
+El ítem B es más alto y el D más pequeño a propósito para que notes la diferencia. 
+Como extra, usa align-self directamente en uno de los ítems. */
+#alineacion{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 100px;
+}
+
+
+
+/* Ejercicio 4 — Grow / Shrink / Basis
+En #grow-shrink, activa flex. Luego en .item--grow aplica flex-grow: 1 y observa qué pasa. 
+Después prueba dar flex-grow: 2 y flex-grow: 3 a distintos ítems. 
+Experimenta también con flex-basis y flex-shrink. */
+#grow-shrink{
+    display: flex;
+}
+
+.item--grow{
+    flex-grow: 1;
+}
+
+
+
+/* Ejercicio 5 — Tarjetas con wrap
+En .tarjetas, activa flex con flex-wrap: wrap y un gap para que las tarjetas se acomoden en filas. 
+Luego en cada .tarjeta, activa flex en columna (flex-direction: column) y 
+usa flex-grow en .tarjeta__texto para que el botón 
+siempre quede pegado al fondo sin importar cuánto texto haya. */
+.tarjetas{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tarjeta{
+    flex-direction: column;
+}
+
+.tarjeta__boton{
+    flex-grow: 1;
+}
+
+
+
+/* Ejercicio 6 — Layout de 3 columnas
+En .layout, activa flex con gap. Luego en .layout__contenido usa flex-grow: 1 
+para que ocupe todo el espacio sobrante entre el sidebar y el aside. */
+.layout{
+    display: flex;
+    gap: 10px;
+}
+
+.layout__contenido{
+    flex-grow: 1;
+}
+
+
+/* Ejercicio 7 (bonus) — Footer
+Repite la misma lógica del header pero en .site-footer. */
+.site-footer{
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+    height: 50px;
+}
