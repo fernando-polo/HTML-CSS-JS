@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+.grid-container{
+    display: grid;
+
+    /* Definir cuantas columnas y filas queremos que haya:*/
+        /* grid-template-columns:300px 300px 300px;
+        grid-template-rows: 300px 300px 300px; */
+    gap: 1rem;
+
+    /* Definir si queremos columnas o filas automáticamente. */
+    grid-auto-flow: column;
+
+    /* Si elegimos filas */
+    grid-auto-rows: 300px;
+
+    /* Si elegimos columnas */
+    grid-auto-columns: 300px;
+
+    /* Alinear solo los hijos del grid */
+    justify-items: center;
+    align-items: center;
+
+    /* Alinear el grid como entidad completa */
+    justify-content: center;
+    align-content: center;
+}
+
+.item{
+    padding: 2rem;
+    height: 100px;
+    width: 100px;
+    background-color: rgba(78, 78, 239, 0.694);
+    color: white;
+    text-align: center;
+    border-radius: 8px;
+    font-size: 2rem;
+}
+
