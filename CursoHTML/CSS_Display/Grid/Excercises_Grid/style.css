@@ -1,0 +1,96 @@
+/* 1 - Grid básico de 3 columnas
+Crea una cuadrícula de 6 elementos distribuidos en 3 columnas iguales. El caso más simple y común de Grid.
+    
+    Fácil grid-template-columns repeat() 1fr
+
+    3 columnas de igual ancho
+    Los 6 elementos se distribuyen automáticamente en 2 filas
+    Espacio uniforme entre celdas con gap */
+
+    .container1{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows:repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .c1-child{
+        display: grid;
+        padding: 1rem;
+        background-color: aqua;
+        justify-content: center;
+    }
+
+
+/* 2 - Layout sidebar con Grid
+    Recrea el ejercicio 4 de Flexbox pero usando Grid. Verás lo directo que es definir 
+    columnas con tamaños mixtos.
+
+    Fácil grid-template-columns px y fr mezclados
+
+    Sidebar de ancho fijo (200px)
+    Contenido principal ocupa el resto con 1fr
+    Solo necesitas 2 líneas de CSS en el contenedor */
+    .container2{
+        display: grid;
+        grid-template-columns: 200px 1fr;
+        padding: 1rem;
+        gap: 1rem;
+        }
+
+    .sidebar{
+        background-color: blue;
+    }
+
+    .contenido-principal{
+        background-color: pink;
+    }
+
+
+/* 3 - Layout holy grail
+    El layout clásico de cualquier página web: 
+    header arriba, footer abajo, sidebar izquierdo, sidebar derecho y contenido en el centro.
+
+    Intermedio grid-template-columns grid-template-rows
+    Header ocupa todo el ancho arriba
+    Footer ocupa todo el ancho abajo
+    En el medio: sidebar izquierdo, contenido central, sidebar derecho */
+    .container3{
+        display: grid;
+        grid-template-columns: 1fr 3fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas: 
+            'header header header'
+            'side1 content side2'
+            'footer footer footer'
+        ;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .head{
+        background-color: aquamarine;
+        grid-area: header;
+    }
+
+    .side1{
+        background-color: green;
+        grid-area: side1;
+    }
+
+
+    .side2{
+        background-color: green;
+        grid-area: side2;
+    }
+
+    .content{
+        background-color: brown;
+        grid-area: content;
+    }
+
+    .footer{
+        background-color: yellow;
+        grid-area: footer;
+    }
+

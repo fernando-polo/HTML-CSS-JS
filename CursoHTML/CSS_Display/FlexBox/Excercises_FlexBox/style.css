@@ -1,0 +1,145 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;padding: 0;
+}
+
+/* 1 - Navbar de navegación
+    Crea una barra de navegación con el logo a la izquierda 
+    y los links a la derecha. 
+    Es uno de los patrones más repetidos en cualquier sitio web. */
+    nav{
+        height: 100px;
+        font-size: 2rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: aqua;
+        padding: 1rem;
+    }
+
+    ul{
+        list-style: none;
+        display: flex;
+        gap: 3rem;
+    }
+
+
+/* 2 - Tarjetas en fila (card grid)
+    Muestra 3 tarjetas de producto en fila, 
+    que se distribuyan equitativamente y tengan el mismo ancho. 
+    Presente en casi cualquier e-commerce o landing page. */
+
+    h1{
+        padding: 0.4rem;
+    }
+
+    h2{
+        padding: 0.4rem
+    }
+
+    .section-cards{
+        background-color: pink;
+        height: 600px;
+        display: flex;
+        justify-content: space-evenly;
+        gap: 10rem;
+        padding: 1rem;
+    }
+
+    .card{
+        display: flex;
+        flex: 1;
+        justify-content: center;
+        background-color: blue;
+        border-radius: 32px;
+    }
+
+    .card article{
+        display: flex;
+        flex-direction: column;  
+        justify-content: center; 
+        align-items: center;
+    }
+
+/* 3 - Centrado perfecto
+    Centra un elemento (como un modal o un botón) 
+    exactamente en el medio de la pantalla, 
+    tanto horizontal como verticalmente. 
+    El clásico problema que flexbox resuelve en 2 líneas. */
+
+    .container-btn{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+
+    }
+
+
+    /* 4 - Layout con sidebar
+    Crea un layout clásico de dashboard: sidebar fijo a la izquierda y 
+    área de contenido principal que ocupa el resto del espacio disponible.
+
+    Intermedio flex-grow flex-shrink width fijo
+
+    El sidebar debe tener un ancho fijo (ej. 200px) que no cambie
+    El área de contenido debe crecer para llenar todo el espacio restante
+    Ambas secciones deben tener la misma altura */
+
+    #dashboard{
+        display: flex;
+        gap: 1rem;
+    }
+
+    #sidebar{
+        flex-shrink: 0;
+        width: 200px;
+        background-color: aqua;
+    }
+
+    #contenido{
+        flex-grow: 1;
+        background-color: blueviolet;
+    }
+
+
+    /* 
+    5 - Formulario con campos alineados
+    Diseña un formulario donde algunos campos estén en fila (nombre + apellido) 
+    y otros ocupen el ancho completo. Los botones deben estar alineados a la derecha.
+
+    Intermedio flex-direction flex-wrap justify-content: flex-end
+    Nombre y apellido en la misma fila con igual ancho
+    Email ocupa el ancho completo
+    Botones "Cancelar" y "Guardar" alineados a la derecha
+    */
+    #formulario{
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    }
+
+    #datos-personales{
+    display: flex;
+    gap: 0.75rem;
+    }
+
+    #datos-personales input {
+    flex: 1;
+    }
+
+    #email {
+    width: 100%;
+    }
+
+    #botones{
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
+    }
