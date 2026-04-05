@@ -12,6 +12,10 @@ function login(usuario) {
     })
 }
 
+
+
+
+
 // Consumirla
 login("Juan")
     .then(datos => {
