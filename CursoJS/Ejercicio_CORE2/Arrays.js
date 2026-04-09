@@ -97,11 +97,12 @@
     ];
 
 
-    const newProducts = products.map(products_html)
 
     function products_html(product){
         return `<li class="${ product.inStock ? 'available' : 'unavailable'}">${product.name} - $${product.price.toLocaleString()}</li>`
     }
 
+    const newProducts = products.map(products_html)
+    
     console.log(newProducts)
 

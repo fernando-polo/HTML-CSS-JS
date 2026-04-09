@@ -1,0 +1,109 @@
+// Nvl 1 - Básico
+        const numeros = [1, 2, 3, 4];
+
+    // Duplicar números
+        const numerosDuplicados = numeros.map((n) => n*2)
+        console.log(numerosDuplicados)
+
+    // Convertir a strings
+        const numerosStr = numeros.map((n) => String(n))
+        console.log(numerosStr)
+
+    // Obtener longitudes
+        const palabras = ["hola", "javascript", "map"];
+        const palabrasLength = palabras.map((n) => n.length)
+        console.log(palabrasLength)
+
+
+// Nivel 2 – Objetos (muy importante)
+        const usuarios = [
+            { nombre: "Fernando", edad: 22 },
+            { nombre: "Ana", edad: 25 }
+        ];
+
+    // Extraer propiedades
+        const usuariosNombres = usuarios.map((u) => u.nombre)
+        console.log(usuariosNombres)
+
+    // Agregar propiedad
+        const usuariosActualizados = usuarios.map(u => ({
+            ...u,
+            activo: true
+        }))
+        console.log(usuariosActualizados)
+
+    // Modificar propiedad
+        const usuariosActualizados1 = usuariosActualizados.map((u) => (
+            {
+                ...u,
+                edad: u.edad+1
+            }
+        ))
+        console.log(usuariosActualizados1)
+
+
+// Nivel 3 – Casos reales (React / frontend)
+
+    // Formatear datos para UI
+        const productos = [
+            { id: 1, nombre: "Laptop", precio: 1000 },
+            { id: 2, nombre: "Mouse", precio: 50 }
+        ];
+
+        // [
+        //     "Laptop - $1000",
+        //     "Mouse - $50"
+        // ]
+
+        const formProducts = productos.map((p) => 
+            `${p.nombre} - $${p.precio}`
+        )
+        console.log(formProducts)
+
+    // Generar HTML (muy real)
+        const nombres = ["Fernando", "Ana", "Luis"]
+
+        // [
+        //     "<li>Fernando</li>",
+        //     "<li>Ana</li>",
+        //     "<li>Luis</li>"
+        // ]
+
+
+        const nombre_li = nombres.map((nombre) => 
+        `<li>${nombre}<li>`
+        )
+
+        console.log(nombre_li)
+
+    // Filtrar + map (combo clásico
+        const usuarios9 = [
+            { nombre: "Fernando", activo: true },
+            { nombre: "Ana", activo: false },
+            { nombre: "Luis", activo: true }
+        ];
+
+        const usuariosActivos = usuarios9
+            .filter(u => u.activo === true)
+            .map(u => u.nombre)
+
+        console.log(usuariosActivos)
+
+// Nivel 4 – Más avanzado (pensar como dev)
+
+    // 10. Cambiar estructura del objeto
+    const usuariosNew = [
+        { id: 1, nombre: "Fernando", edad: 16 }
+    ];
+
+    // [
+    //     { userId: 1, nombre: "Fernando", esMayor: true }
+    // ]
+
+    const newUsers = usuariosNew.map((u) => ({
+        userId: u.id,
+        nombre: u.nombre,
+        esMayor: u.edad >= 18
+    }))
+
+    

@@ -37,7 +37,7 @@
     // Esperado: Carlos no pasa (menor), María y Pedro sí, José y Laura no (inactivos)
     // Ojo: Carlos es activo pero menor — ambas condiciones deben cumplirse
 
-    const newUsers = users.filter(user => user.age >= 18 && user.active)
+    const newUsers = users.filter(user => {user.age >= 18 && user.active})
 
     console.log(newUsers)
 
