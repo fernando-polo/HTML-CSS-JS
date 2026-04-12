@@ -1,0 +1,19 @@
+body{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+header{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    background-color: green;
+}
