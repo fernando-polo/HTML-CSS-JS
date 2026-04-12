@@ -11,10 +11,27 @@
         HEADER
     </header>
     <main>
+
         <h1>Todo List App</h1>
-        <input type="text" name="" id="inputTask" placeholder="Ingresa tarea nueva">
-        <button id="btnAdd">Añadir tarea</button>
+
+        <form id="formBuscarTareas">
+            <fieldset>
+                <legend>Buscar Tareas</legend>
+                <input type="text" id="inputSearchTask" placeholder="Ingresa tarea a buscar">
+                <button id="btnSearch">Buscar Tarea</button>
+            </fieldset>
+        </form>
+
+        <form id="formCrearTareas">
+            <fieldset>
+                <legend>Añadir Tareas</legend>
+                <input type="text" id="inputTask" placeholder="Ingresa tarea nueva">
+                <button id="btnAdd">Añadir tarea</button>
+            </fieldset>
+        </form>
+
         <div id="listDiv"></div>
+
     </main>
     <footer>
         FOOTER
