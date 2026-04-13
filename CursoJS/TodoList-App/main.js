@@ -1,7 +1,6 @@
 // Array con las tareas guardadas
 const tareas = []
 
-
 // Div para crear la lista
 const listDiv = document.querySelector('#listDiv')
 

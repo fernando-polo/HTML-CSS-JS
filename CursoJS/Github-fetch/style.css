@@ -1,0 +1,68 @@
+/* Reseteo básico recomendado */
+*, *::before, *::after {
+  box-sizing: border-box; /* Manejo mejor del modelo de caja */
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+
+input, button, textarea, select {
+  font: inherit;
+}
+
+.header{
+    display: flex;
+    height: 10dvh;
+    background-color: blue;
+    
+}
+
+.main{
+    display: flex;
+    height: 80dvh;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #0d1117; */
+}
+
+.search{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    gap: 1rem;
+}
+
+.search__image{
+    max-width: 300px;
+    height: auto;
+}
+
+.search__title{
+    font-size: 3rem;
+}
+
+
+.user-card{
+    display: flex;
+}
+
+.user-card__info{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer{
+    display: flex;
+    height: 10dvh;
+    background-color: blue;
+}
